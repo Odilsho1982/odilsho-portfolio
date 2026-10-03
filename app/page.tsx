@@ -107,11 +107,11 @@ function SectionLabel({ children }: { children: React.ReactNode }) {
 }
 
 const iconLink =
-  "inline-flex h-9 w-9 items-center justify-center rounded-md text-neutral-400 transition hover:bg-white/5 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/40";
+  "inline-flex h-9 w-9 items-center justify-center rounded-md text-neutral-400 transition hover:bg-white/[0.06] backdrop-blur-xl/5 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/40";
 const btnPrimary =
-  "inline-flex items-center justify-center gap-2 rounded-md bg-white px-5 py-2.5 text-sm font-medium text-black transition hover:bg-neutral-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/40 focus-visible:ring-offset-2 focus-visible:ring-offset-[#0a0a0a]";
+  "inline-flex items-center justify-center gap-2 rounded-md bg-white/[0.06] backdrop-blur-xl px-5 py-2.5 text-sm font-medium text-white transition hover:bg-neutral-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/40 focus-visible:ring-offset-2 focus-visible:ring-offset-[#0a0a0a]";
 const btnSecondary =
-  "inline-flex items-center justify-center gap-2 rounded-md border border-white/15 px-5 py-2.5 text-sm font-medium text-white transition hover:border-white/30 hover:bg-white/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/40";
+  "inline-flex items-center justify-center gap-2 rounded-md border border-white/15 px-5 py-2.5 text-sm font-medium text-white transition hover:border-white/30 hover:bg-white/[0.06] backdrop-blur-xl/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/40";
 
 export default function Home() {
   return (
@@ -148,7 +148,7 @@ export default function Home() {
                 <LinkedInIcon />
               </a>
             )}
-            <a href="#contact" className="ml-1 rounded-md bg-white px-3 py-1.5 text-sm font-medium text-black transition hover:bg-neutral-200 sm:px-4">
+            <a href="#contact" className="ml-1 rounded-md bg-white/[0.06] backdrop-blur-xl px-3 py-1.5 text-sm font-medium text-white transition hover:bg-neutral-200 sm:px-4">
               Get in Touch
             </a>
           </div>
@@ -169,7 +169,7 @@ export default function Home() {
       <main className="relative mx-auto max-w-5xl px-4 sm:px-6">
         {/* Hero */}
         <section className="pb-20 pt-16 sm:pb-28 sm:pt-24">
-          <div className="inline-flex items-center gap-2 rounded-full bg-white/10 backdrop-blur border border-white/20 bg-white/[0.03] px-3 py-1 text-xs text-neutral-300">
+          <div className="inline-flex items-center gap-2 rounded-full bg-white/[0.06] backdrop-blur-xl/10 backdrop-blur border border-white/20 bg-white/[0.06] backdrop-blur-xl/[0.03] px-3 py-1 text-xs text-neutral-300">
             <span className="relative flex h-2 w-2">
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-60 motion-reduce:animate-none" />
               <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
@@ -224,7 +224,7 @@ export default function Home() {
             </div>
 
             <aside className="md:col-span-2">
-              <dl className="divide-y divide-white/[0.08] rounded-xl bg-white/10 backdrop-blur border border-white/20 bg-white/[0.02] text-sm">
+              <dl className="divide-y divide-white/[0.08] rounded-xl bg-white/[0.06] backdrop-blur-xl/10 backdrop-blur border border-white/20 bg-white/[0.06] backdrop-blur-xl/[0.02] text-sm">
                 <div className="p-5">
                   <dt className="font-mono text-xs uppercase tracking-wider text-neutral-500">Location</dt>
                   <dd className="mt-1.5 text-neutral-200">{PROFILE.location} (Remote)</dd>
@@ -249,7 +249,7 @@ export default function Home() {
                   <dt className="font-mono text-xs uppercase tracking-wider text-neutral-500">Tech Stack</dt>
                   <dd className="mt-2.5 flex flex-wrap gap-2">
                     {STACK.map((t) => (
-                      <span key={t} className="rounded-md bg-white/10 backdrop-blur border border-white/20 bg-white/[0.04] px-2 py-1 font-mono text-xs text-neutral-300">
+                      <span key={t} className="rounded-md bg-white/[0.06] backdrop-blur-xl/10 backdrop-blur border border-white/20 bg-white/[0.06] backdrop-blur-xl/[0.04] px-2 py-1 font-mono text-xs text-neutral-300">
                         {t}
                       </span>
                     ))}
@@ -269,12 +269,12 @@ export default function Home() {
             {PROJECTS.map((p) => (
               <article
                 key={p.title}
-                className="group flex flex-col rounded-xl bg-white/10 backdrop-blur border border-white/20 bg-white/[0.02] p-6 transition hover:border-white/20 hover:bg-white/[0.04]"
+                className="group flex flex-col rounded-xl bg-white/[0.06] backdrop-blur-xl/10 backdrop-blur border border-white/20 bg-white/[0.06] backdrop-blur-xl/[0.02] p-6 transition hover:border-white/20 hover:bg-white/[0.06] backdrop-blur-xl/[0.04]"
               >
                 <div className="flex items-start justify-between gap-4">
                   <h3 className="text-lg font-medium text-white">{p.title}</h3>
                   {!p.live && !p.github && (
-                    <span className="shrink-0 rounded-full bg-white/10 backdrop-blur border border-white/20 px-2 py-0.5 font-mono text-[10px] uppercase tracking-wider text-neutral-500">
+                    <span className="shrink-0 rounded-full bg-white/[0.06] backdrop-blur-xl/10 backdrop-blur border border-white/20 px-2 py-0.5 font-mono text-[10px] uppercase tracking-wider text-neutral-500">
                       Coming soon
                     </span>
                   )}
@@ -282,7 +282,7 @@ export default function Home() {
                 <p className="mt-3 flex-1 text-sm leading-relaxed text-neutral-400">{p.description}</p>
                 <ul className="mt-5 flex flex-wrap gap-2">
                   {p.tags.map((t) => (
-                    <li key={t} className="rounded-md bg-white/[0.06] px-2 py-1 font-mono text-xs text-neutral-300">
+                    <li key={t} className="rounded-md bg-white/[0.06] backdrop-blur-xl/[0.06] px-2 py-1 font-mono text-xs text-neutral-300">
                       {t}
                     </li>
                   ))}
@@ -315,7 +315,7 @@ export default function Home() {
 
           <ol className="mt-10 space-y-4">
             {EXPERIENCE.map((job) => (
-              <li key={job.role} className="rounded-xl bg-white/10 backdrop-blur border border-white/20 bg-white/[0.02] p-6">
+              <li key={job.role} className="rounded-xl bg-white/[0.06] backdrop-blur-xl/10 backdrop-blur border border-white/20 bg-white/[0.06] backdrop-blur-xl/[0.02] p-6">
                 <div className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between">
                   <h3 className="text-base font-medium text-white">
                     {job.role} <span className="text-neutral-500">· {job.company}</span>
@@ -375,3 +375,5 @@ export default function Home() {
     </div>
   );
 }
+
+
